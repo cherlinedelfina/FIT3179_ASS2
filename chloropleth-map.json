@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Plastic Surgery Demands in the US",
+  "width": 600,
+  "height": 300,
+  "projection": {"type": "equalEarth"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2_map/main/usa_state_map.TopoJSON",
+    "format": {"type": "topojson", "feature": "USA_STATE_MAP"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2_map/main/ASS2_US_dataset1%20-%20Sheet1.csv"
+        },
+        "key": "State",
+        "fields": ["Demand Index"]
+      }
+    },
+    {"calculate": "(datum['Demand Index'])", "as": "Demand Index"}
+  ],
+  "mark": {"type": "geoshape"},
+  "encoding": {
+    "color": {
+      "field": "Demand Index",
+      "type": "quantitative",
+      "scale": {
+        "type": "linear",
+        "domain": [0, 0.00011],
+        "range": ["#FEF001", "#C70039"]
+      }
+    },
+    "tooltip": [
+      {"field": "properties.NAME", "type": "nominal", "title": "State"},
+      {"field": "Demand Index", "type": "quantitative"}
+    ]
+  },
+  "config": {}
+}
