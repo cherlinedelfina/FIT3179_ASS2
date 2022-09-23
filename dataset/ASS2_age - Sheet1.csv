@@ -1,7 +1,13 @@
-Age,Surgical,Minimally invasive,Total
-13-19,88000,141000,229000
-20-29,283000,485000,768000
-30-39,364000,1800000,2164000
-40-54,684000,5400000,6084000
-55-69,728000,3200000,3928000
-70+,136000,110000,246000
+Age,Procedure,Count,Total
+13-19,Surgical,88000
+20-29,Surgical,283000
+30-39,Surgical,364000
+40-54,Surgical,684000
+55-69,Surgical,728000
+70+,Surgical,136000
+13-19,Minimally invasive,141000
+20-29,Minimally invasive,485000
+30-39,Minimally invasive,1800000
+40-54,Minimally invasive,5400000
+55-69,Minimally invasive,3200000
+70+,Minimally invasive,110000
