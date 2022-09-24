@@ -1,13 +1,13 @@
-Age,Procedure,Count,Order
-13-19,Surgical,88000,0
-20-29,Surgical,283000,0
-30-39,Surgical,364000,0
-40-54,Surgical,684000,0
-55-69,Surgical,728000,0
-70+,Surgical,136000,0
-13-19,Minimally invasive,141000,1
-20-29,Minimally invasive,485000,1
-30-39,Minimally invasive,1800000,1
-40-54,Minimally invasive,5400000,1
-55-69,Minimally invasive,3200000,1
-70+,Minimally invasive,110000,1
+Age,Procedure,Count
+13-19,Surgical,88000
+20-29,Surgical,283000
+30-39,Surgical,364000
+40-54,Surgical,684000
+55-69,Surgical,728000
+70+,Surgical,136000
+13-19,Minimally invasive,141000
+20-29,Minimally invasive,485000
+30-39,Minimally invasive,1800000
+40-54,Minimally invasive,5400000
+55-69,Minimally invasive,3200000
+70+,Minimally invasive,110000
