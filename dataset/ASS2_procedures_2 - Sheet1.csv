@@ -1,0 +1,31 @@
+id,surgery,total procedures,parent
+1,Breast augmentation,"193,073",28
+2,Breast implant removals,"36,367",28
+3,Breast lift,"87,051",28
+4,Breast reduction,52149,28
+5,Buttock augmentation,"21,823",30
+6,Buttock implants,"1,179",30
+7,Buttock lift,"2,872",30
+8,Calf augmentation,299,30
+9,Cheek implant,"108,189",29
+10,Chin augmentation,"43,900",29
+11,Dermabrasion,"139,933",29
+12,Ear surgery,"53,095",29
+13,Eyelid surgery,"325,112",29
+14,Facelift,"234,374",29
+15,Forehead lift,"88,675",29
+16,Hair transplantation,"9,670",29
+17,Labiaplasty,"9,725",30
+18,Lip augmentation,"34,236",29
+19,Lip reduction,"18,301",29
+20,Liposuction,"211,067",28
+21,Lower body lift,"8,433",30
+22,Neck lift,"160,235",29
+23,Nose reshaping,"352,555",29
+24,Pectoral implants,697,28
+25,Thigh Lift,"9,275",30
+26,Tummy tuck,"97,988",28
+27,Upper arm lift,"14,447",30
+28,Torso,,
+29,Head ,,
+30,Limbs,,
