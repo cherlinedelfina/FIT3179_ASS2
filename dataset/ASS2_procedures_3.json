@@ -7,177 +7,177 @@
  },
  {
    "id": 2,
-   "surgery": "Breast implant removals",
-   "total procedures": "36367",
+   "name": "Breast implant removals",
+   "size": "36367",
    "parent": 28
  },
  {
    "id": 3,
-   "surgery": "Breast lift",
-   "total procedures": "87051",
+   "name": "Breast lift",
+   "size": "87051",
    "parent": 28
  },
  {
    "id": 4,
-   "surgery": "Breast reduction",
-   "total procedures": "52149",
+   "name": "Breast reduction",
+   "size": "52149",
    "parent": 28
  },
  {
    "id": 5,
-   "surgery": "Buttock augmentation",
-   "total procedures": "21823",
+   "name": "Buttock augmentation",
+   "size": "21823",
    "parent": 30
  },
  {
    "id": 6,
-   "surgery": "Buttock implants",
-   "total procedures": "1179",
+   "name": "Buttock implants",
+   "size": "1179",
    "parent": 30
  },
  {
    "id": 7,
-   "surgery": "Buttock lift",
-   "total procedures": "2872",
+   "name": "Buttock lift",
+   "size": "2872",
    "parent": 30
  },
  {
    "id": 8,
-   "surgery": "Calf augmentation",
-   "total procedures": "299",
+   "name": "Calf augmentation",
+   "size": "299",
    "parent": 30
  },
  {
    "id": 9,
-   "surgery": "Cheek implant",
-   "total procedures": "108189",
+   "name": "Cheek implant",
+   "size": "108189",
    "parent": 29
  },
  {
    "id": 10,
-   "surgery": "Chin augmentation",
-   "total procedures": "43900",
+   "name": "Chin augmentation",
+   "size": "43900",
    "parent": 29
  },
  {
    "id": 11,
-   "surgery": "Dermabrasion",
-   "total procedures": "139933",
+   "name": "Dermabrasion",
+   "size": "139933",
    "parent": 29
  },
  {
    "id": 12,
-   "surgery": "Ear surgery",
-   "total procedures": "53095",
+   "name": "Ear surgery",
+   "size": "53095",
    "parent": 29
  },
  {
    "id": 13,
-   "surgery": "Eyelid surgery",
-   "total procedures": "325112",
+   "name": "Eyelid surgery",
+   "size": "325112",
    "parent": 29
  },
  {
    "id": 14,
-   "surgery": "Facelift",
-   "total procedures": "234374",
+   "name": "Facelift",
+   "size": "234374",
    "parent": 29
  },
  {
    "id": 15,
-   "surgery": "Forehead lift",
-   "total procedures": "88675",
+   "name": "Forehead lift",
+   "size": "88675",
    "parent": 29
  },
  {
    "id": 16,
-   "surgery": "Hair transplantation",
-   "total procedures": "9670",
+   "name": "Hair transplantation",
+   "size": "9670",
    "parent": 29
  },
  {
    "id": 17,
-   "surgery": "Labiaplasty",
-   "total procedures": "9725",
+   "name": "Labiaplasty",
+   "size": "9725",
    "parent": 30
  },
  {
    "id": 18,
-   "surgery": "Lip augmentation",
-   "total procedures": "34236",
+   "name": "Lip augmentation",
+   "size": "34236",
    "parent": 29
  },
  {
    "id": 19,
-   "surgery": "Lip reduction",
-   "total procedures": "18301",
+   "name": "Lip reduction",
+   "size": "18301",
    "parent": 29
  },
  {
    "id": 20,
-   "surgery": "Liposuction",
-   "total procedures": "211067",
+   "name": "Liposuction",
+   "size": "211067",
    "parent": 28
  },
  {
    "id": 21,
-   "surgery": "Lower body lift",
-   "total procedures": "8433",
+   "name": "Lower body lift",
+   "size": "8433",
    "parent": 30
  },
  {
    "id": 22,
-   "surgery": "Neck lift",
-   "total procedures": "160235",
+   "name": "Neck lift",
+   "size": "160235",
    "parent": 29
  },
  {
    "id": 23,
-   "surgery": "Nose reshaping",
-   "total procedures": "352555",
+   "name": "Nose reshaping",
+   "size": "352555",
    "parent": 29
  },
  {
    "id": 24,
-   "surgery": "Pectoral implants",
-   "total procedures": "697",
+   "name": "Pectoral implants",
+   "size": "697",
    "parent": 28
  },
  {
    "id": 25,
-   "surgery": "Thigh Lift",
-   "total procedures": "9,275",
+   "name": "Thigh Lift",
+   "size": "9275",
    "parent": 30
  },
  {
    "id": 26,
-   "surgery": "Tummy tuck",
-   "total procedures": "97,988",
+   "name": "Tummy tuck",
+   "size": "97988",
    "parent": 28
  },
  {
    "id": 27,
-   "surgery": "Upper arm lift",
-   "total procedures": "14,447",
+   "name": "Upper arm lift",
+   "size": "14447",
    "parent": 30
  },
  {
    "id": 28,
-   "surgery": "Torso",
+   "name": "Torso",
    "parent": 31
  },
  {
    "id": 29,
-   "surgery": "Head ",
+   "name": "Head ",
    "parent": 31
  },
  {
    "id": 30,
-   "surgery": "Limbs",
+   "name": "Limbs",
    "parent": 31
  },
  {
    "id": 31,
-   "surgery": "Procedures"
+   "name": "Procedures"
  }
 ]
