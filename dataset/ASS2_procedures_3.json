@@ -2,19 +2,19 @@
  {
    "id": 1,
    "name": "Breast augmentation",
-   "size": "193,073",
+   "size": "193073",
    "parent": 28
  },
  {
    "id": 2,
    "name": "Breast implant removals",
-   "size": "36,367",
+   "size": "36367",
    "parent": 28
  },
  {
    "id": 3,
    "name": "Breast lift",
-   "size": "87,051",
+   "size": "87051",
    "parent": 28
  },
  {
