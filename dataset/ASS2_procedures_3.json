@@ -1,20 +1,20 @@
 [
  {
    "id": 1,
-   "surgery": "Breast augmentation",
-   "total procedures": "193,073",
+   "name": "Breast augmentation",
+   "size": "193073",
    "parent": 28
  },
  {
    "id": 2,
    "surgery": "Breast implant removals",
-   "total procedures": "36,367",
+   "total procedures": "36367",
    "parent": 28
  },
  {
    "id": 3,
    "surgery": "Breast lift",
-   "total procedures": "87,051",
+   "total procedures": "87051",
    "parent": 28
  },
  {
@@ -26,19 +26,19 @@
  {
    "id": 5,
    "surgery": "Buttock augmentation",
-   "total procedures": "21,823",
+   "total procedures": "21823",
    "parent": 30
  },
  {
    "id": 6,
    "surgery": "Buttock implants",
-   "total procedures": "1,179",
+   "total procedures": "1179",
    "parent": 30
  },
  {
    "id": 7,
    "surgery": "Buttock lift",
-   "total procedures": "2,872",
+   "total procedures": "2872",
    "parent": 30
  },
  {
@@ -50,91 +50,91 @@
  {
    "id": 9,
    "surgery": "Cheek implant",
-   "total procedures": "108,189",
+   "total procedures": "108189",
    "parent": 29
  },
  {
    "id": 10,
    "surgery": "Chin augmentation",
-   "total procedures": "43,900",
+   "total procedures": "43900",
    "parent": 29
  },
  {
    "id": 11,
    "surgery": "Dermabrasion",
-   "total procedures": "139,933",
+   "total procedures": "139933",
    "parent": 29
  },
  {
    "id": 12,
    "surgery": "Ear surgery",
-   "total procedures": "53,095",
+   "total procedures": "53095",
    "parent": 29
  },
  {
    "id": 13,
    "surgery": "Eyelid surgery",
-   "total procedures": "325,112",
+   "total procedures": "325112",
    "parent": 29
  },
  {
    "id": 14,
    "surgery": "Facelift",
-   "total procedures": "234,374",
+   "total procedures": "234374",
    "parent": 29
  },
  {
    "id": 15,
    "surgery": "Forehead lift",
-   "total procedures": "88,675",
+   "total procedures": "88675",
    "parent": 29
  },
  {
    "id": 16,
    "surgery": "Hair transplantation",
-   "total procedures": "9,670",
+   "total procedures": "9670",
    "parent": 29
  },
  {
    "id": 17,
    "surgery": "Labiaplasty",
-   "total procedures": "9,725",
+   "total procedures": "9725",
    "parent": 30
  },
  {
    "id": 18,
    "surgery": "Lip augmentation",
-   "total procedures": "34,236",
+   "total procedures": "34236",
    "parent": 29
  },
  {
    "id": 19,
    "surgery": "Lip reduction",
-   "total procedures": "18,301",
+   "total procedures": "18301",
    "parent": 29
  },
  {
    "id": 20,
    "surgery": "Liposuction",
-   "total procedures": "211,067",
+   "total procedures": "211067",
    "parent": 28
  },
  {
    "id": 21,
    "surgery": "Lower body lift",
-   "total procedures": "8,433",
+   "total procedures": "8433",
    "parent": 30
  },
  {
    "id": 22,
    "surgery": "Neck lift",
-   "total procedures": "160,235",
+   "total procedures": "160235",
    "parent": 29
  },
  {
    "id": 23,
    "surgery": "Nose reshaping",
-   "total procedures": "352,555",
+   "total procedures": "352555",
    "parent": 29
  },
  {
@@ -163,14 +163,21 @@
  },
  {
    "id": 28,
-   "surgery": "Torso"
+   "surgery": "Torso",
+   "parent": 31
  },
  {
    "id": 29,
-   "surgery": "Head "
+   "surgery": "Head ",
+   "parent": 31
  },
  {
    "id": 30,
-   "surgery": "Limbs"
+   "surgery": "Limbs",
+   "parent": 31
+ },
+ {
+   "id": 31,
+   "surgery": "Procedures"
  }
 ]
