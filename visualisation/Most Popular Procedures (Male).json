@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Top Cosmetic Procedures (Male)",
+    "width": 500,
+  "height": 400,
+  "padding": 2.5,
+  "data": {
+    "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_male%20-%20Sheet1.csv",
+    "format": {"type": "csv"}
+  },
+  "mark": {
+    "type": "bar",
+    "fill": "#235789"
+  },
+  "encoding": {
+    "x": {"field": "Surgery", "type": "ordinal", "title": "Procedures","axis": {"labelAngle": 0}, "sort": "array"},
+    "y": {"field": "Total procedures", "type": "quantitative","title": "Counts","axis": {"tickCount": 4}}
+  },
+  "layer": [{
+    "mark": "bar",
+    "fill": "#F1D302"
+      }
+,{
+    "mark": {
+      "type": "text",
+      "yOffset": -1,
+      "baseline": "bottom"
+    },
+    "encoding": {
+      "text": {"field": "Total procedures", "type": "quantitative","format": ".3s"},
+      "color": { "value": "black"}
+    }
+  }],
+  "config": {
+    "scale": {
+      "bandPaddingInner": 0.2
+    }
+  }
+}

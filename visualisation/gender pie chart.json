@@ -1,0 +1,53 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Cosmetic Surgery Patients in the US (2020)",
+  "description": "Pie Chart with percentage_tooltip",
+  "data": {
+    "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_gender%20-%20Sheet1.csv"
+  },
+  "transform": [
+    {"calculate": "(datum.Total/13410000)", "as": "percentage_total"}
+  ],
+  "mark": {"type": "arc"},
+  "encoding": {
+    "theta": {
+      "field": "percentage_total",
+      "type": "quantitative",
+      "stack": "normalize"
+    },
+    "color": {
+      "field": "Gender",
+      "type": "nominal",
+      "legend": {"orient": "none", "legendX": 208, "legendY": 8},
+      "scale": {"domain": ["Female", "Male"], "range": ["#F1D302", "#235789"]}
+    }
+  },
+  "layer": [
+    {"mark": {"type": "arc", "outerRadius": 95, "xOffset": 18}},
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "radius": 57,
+        "fontSize": 14,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "theta": {"field": "percentage_total", "type": "quantitative"},
+        "color": {
+          "condition": {
+            "test": "datum['percentage_total'] > 0.5",
+            "value": "black"
+          },
+          "value": "white"
+        },
+        "text": {
+          "field": "percentage_total",
+          "type": "quantitative",
+          "format": ".0%"
+        }
+      }
+    }
+  ],
+  "config": {}
+}

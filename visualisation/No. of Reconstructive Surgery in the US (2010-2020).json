@@ -1,0 +1,56 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "No. of Reconstructive Surgery in the US (2010-2020)",
+  "width": 500,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_reconstructive_year%20-%20Sheet1.csv"
+  },
+  "transform": [{"calculate": "datum.Counts/1000000", "as": "Count"}],
+  "mark": {"type": "line", "point": {"filled": false, "fill": "white"}},
+  "encoding": {
+    "x": {
+      "timeUnit": "year",
+      "field": "Year",
+      "axis": {"format": "%Y", "tickCount": 6},
+      "title": "Year"
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "Count",
+      "axis": {"tickCount": 3},
+      "title": "Counts (in million)"
+    },
+    "tooltip": [
+      {
+        "field": "year_Year",
+        "format": "%Y",
+        "timeUnit": "year",
+        "type": "nominal",
+        "title": "Year"
+      },
+      {"field": "Counts", "type": "nominal", "title": "Count", "format": ".3s"}
+    ]
+  },
+  "layer": [
+    {"mark": {"type": "line", "point": {"filled": false, "fill": "white"}}},
+    {
+      "mark": {
+        "type": "text",
+        "yOffset": -6,
+        "xOffset": 1,
+        "baseline": "bottom",
+        "size": 15
+      },
+      "encoding": {
+        "text": {"field": "Counts", "type": "quantitative", "format": ".3s"},
+        "color": {"value": "#a50000"},
+        "opacity": {
+          "condition": {"test": "datum['Counts'] == '6878486'", "value": 1},
+          "value": 0
+        }
+      }
+    }
+  ],
+  "config": {}
+}

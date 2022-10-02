@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Google Search Volume for 'Plastic Surgery' in the US (per 100,000 people)",
+  "width": 600,
+  "height": 300,
+  "projection": {"type": "equalEarth"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2_map/main/usa_state_map.TopoJSON",
+    "format": {"type": "topojson", "feature": "USA_STATE_MAP"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2_map/main/ASS2_US_dataset1%20-%20Sheet1.csv"
+        },
+        "key": "State",
+        "fields": ["Demand Index"]
+      }
+    },
+    {"calculate": "(round(datum['Demand Index']*100000))", "as": "Demand"}
+  ],
+  "mark": {"type": "geoshape"},
+  "encoding": {
+    "color": {
+      "field": "Demand",
+      "type": "quantitative",
+      "scale": {
+        "type": "threshold",
+        "domain": [2, 4, 6, 8],
+        "range": ["#ffeda0", "#fed98e", "#fe9929", "#d95f0e", "#993404"]
+      }
+    },
+    "tooltip": [
+      {"field": "properties.NAME", "type": "nominal", "title": "State"},
+      {"field": "Demand", "type": "quantitative"}
+    ]
+  },
+  "config": {}
+}

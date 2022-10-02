@@ -1,0 +1,75 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Age of Cosmetic Surgery Patients (2020)",
+  "width": 500,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_age%20-%20Sheet1.csv"
+  },
+  "transform": [
+    {
+      "calculate": "indexof(['Minimally invasive', 'Surgical'], datum.Procedure)",
+      "as": "order"
+    },
+    {"calculate": "datum.Count/1000000", "as": "Counts"},
+    {
+      "joinaggregate": [{"op": "sum", "field": "Counts", "as": "Sum_counts"}],
+      "groupby": ["Age"]
+    },
+    {"calculate": "datum.Sum_counts*1000000", "as": "Counts_m"}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Age",
+      "type": "nominal",
+      "axis": {"labelAngle": 0},
+      "title": "Age",
+      "scale": {"paddingInner": 0.02, "paddingOuter": 0}
+    },
+    "y": {
+      "field": "Counts",
+      "type": "quantitative",
+      "axis": {"tickCount": 4},
+      "title": "Counts (in million)"
+    },
+    "color": {
+      "field": "Procedure",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Surgical", "Minimally invasive"],
+        "range": ["#5D3A9B", "#E66100"]
+      },
+      "legend": {"orient": "none", "legendX": 15, "legendY": 40}
+    },
+    "order": {"field": "order", "type": "ordinal"},
+    "tooltip": [
+      {"field": "Procedure", "type": "nominal"},
+      {
+        "field": "Count",
+        "type": "quantitative",
+        "title": "Count",
+        "format": ".2s"
+      }
+    ]
+  },
+  "layer": [
+    {"mark": "bar"},
+    {
+      "mark": {"type": "text", "yOffset": -4, "baseline": "bottom"},
+      "encoding": {
+        "text": {"field": "Counts_m", "type": "quantitative", "format": ".2s"},
+        "y": {"scale": "Age", "field": "Sum_counts"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Procedure'] == 'Minimally invasive'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    }
+  ],
+  "config": {}
+}
