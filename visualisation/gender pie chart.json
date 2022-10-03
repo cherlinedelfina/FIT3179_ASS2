@@ -2,7 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Cosmetic Surgery Patients in the US (2020)",
   "width": 100,
-  "height": 100,
+  "height":140,
+  "padding":0,
   "data": {
     "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_gender%20-%20Sheet1.csv"
   },
@@ -19,17 +20,17 @@
     "color": {
       "field": "Gender",
       "type": "nominal",
-      "legend": {"orient": "none", "legendX": 208, "legendY": 8},
+      "legend": {"orient": "none", "legendX": 155, "legendY": 14},
       "scale": {"domain": ["Female", "Male"], "range": ["#F1D302", "#235789"]}
     }
   },
   "layer": [
-    {"mark": {"type": "arc", "outerRadius": 95, "xOffset": 18}},
+    {"mark": {"type": "arc", "outerRadius": 70, "xOffset": 11, "yOffset": 9}},
     {
       "mark": {
         "type": "text",
         "align": "right",
-        "radius": 57,
+        "radius": 37,
         "fontSize": 14,
         "fontWeight": "bold"
       },
