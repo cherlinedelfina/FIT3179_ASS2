@@ -39,7 +39,7 @@
         "domain": ["Surgical", "Minimally invasive"],
         "range": ["#5D3A9B", "#E66100"]
       },
-      "legend": {"orient": "none", "legendX": 15, "legendY": 40}
+      "legend": {"orient": "none", "legendX": 15, "legendY": 20}
     },
     "order": {"field": "order", "type": "ordinal"},
     "tooltip": [
