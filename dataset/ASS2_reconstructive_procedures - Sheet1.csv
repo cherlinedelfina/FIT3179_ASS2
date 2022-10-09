@@ -1,0 +1,199 @@
+Year,Procedure,Counts
+2020,Dog bite repair,47454
+2020,Birth defect,68915
+2020,Breast implant removals,22676
+2020,Breast reconstruction,137808
+2020,Breast reduction,63746
+2020,Burn care,24391
+2020,Hand surgery,206928
+2020,Hand and neck reconstruction,35387
+2020,Hernia repair,13191
+2020,Laceration repair,386710
+2020,Lower extremity reconstruction,23053
+2020,Maxillofacial surgery,256085
+2020,Migraine peripheral trigger site surgery,4520
+2020,Pelvic floor reconstruction,2993
+2020,Pressure ulcers,17463
+2020,Scar revision,263643
+2020,Tumor removal,5191300
+2020,Others,112223
+2019,Dog bite repair,43215
+2019,Birth defect,59986
+2019,Breast implant removals,22934
+2019,Breast reconstruction,135996
+2019,Breast reduction,65138
+2019,Burn care,25854
+2019,Hand surgery,204105
+2019,Hand and neck reconstruction,35800
+2019,Hernia repair,13715
+2019,Laceration repair,391190
+2019,Lower extremity reconstruction,23510
+2019,Maxillofacial surgery,207862
+2019,Migraine peripheral trigger site surgery,5121
+2019,Pelvic floor reconstruction,3144
+2019,Pressure ulcers,15431
+2019,Scar revision,279239
+2019,Tumor removal,5003243
+2019,Others,117108
+2018,Dog bite repair,26906
+2018,Birth defect,32870
+2018,Breast implant removals,19149
+2018,Breast reconstruction,101657
+2018,Breast reduction,57535
+2018,Burn care,17682
+2018,Hand surgery,138345
+2018,Hand and neck reconstruction,27439
+2018,Hernia repair,11173
+2018,Laceration repair,253447
+2018,Lower extremity reconstruction,15029
+2018,Maxillofacial surgery,204521
+2018,Migraine peripheral trigger site surgery,
+2018,Pelvic floor reconstruction,1719
+2018,Pressure ulcers,
+2018,Scar revision,182250
+2018,Tumor removal,4462519
+2018,Others,253639
+2017,Dog bite repair,27923
+2017,Birth defect,31582
+2017,Breast implant removals,19415
+2017,Breast reconstruction,106295
+2017,Breast reduction,59463
+2017,Burn care,16964
+2017,Hand surgery,138095
+2017,Hand and neck reconstruction,27898
+2017,Hernia repair,10758
+2017,Laceration repair,253760
+2017,Lower extremity reconstruction,15625
+2017,Maxillofacial surgery,204778
+2017,Migraine peripheral trigger site surgery,
+2017,Pelvic floor reconstruction,1592
+2017,Pressure ulcers,
+2017,Scar revision,182321
+2017,Tumor removal,4479033
+2017,Others,258851
+2016,Dog bite repair,28991
+2016,Birth defect,29959
+2016,Breast implant removals,18778
+2016,Breast reconstruction,109256
+2016,Breast reduction,61821
+2016,Burn care,16183
+2016,Hand surgery,135250
+2016,Hand and neck reconstruction,28496
+2016,Hernia repair,9938
+2016,Laceration repair,253361
+2016,Lower extremity reconstruction,16444
+2016,Maxillofacial surgery,202688
+2016,Migraine peripheral trigger site surgery,
+2016,Pelvic floor reconstruction,1421
+2016,Pressure ulcers,
+2016,Scar revision,181190
+2016,Tumor removal,4473238
+2016,Others,253993
+2015,Dog bite repair,28079
+2015,Birth defect,30383
+2015,Breast implant removals,17892
+2015,Breast reconstruction,106338
+2015,Breast reduction,60175
+2015,Burn care,15606
+2015,Hand surgery,130280
+2015,Hand and neck reconstruction,27987
+2015,Hernia repair,10156
+2015,Laceration repair,253441
+2015,Lower extremity reconstruction,16801
+2015,Maxillofacial surgery,200550
+2015,Migraine peripheral trigger site surgery,
+2015,Pelvic floor reconstruction,1348
+2015,Pressure ulcers,
+2015,Scar revision,179066
+2015,Tumor removal,4472153
+2015,Others,264743
+2014,Dog bite repair,28528
+2014,Birth defect,29221
+2014,Breast implant removals,17496
+2014,Breast reconstruction,102215
+2014,Breast reduction,59883
+2014,Burn care,15457
+2014,Hand surgery,129715
+2014,Hand and neck reconstruction,27281
+2014,Hernia repair,10048
+2014,Laceration repair,250946
+2014,Lower extremity reconstruction,16334
+2014,Maxillofacial surgery,199234
+2014,Migraine peripheral trigger site surgery,
+2014,Pelvic floor reconstruction,1351
+2014,Pressure ulcers,
+2014,Scar revision,177345
+2014,Tumor removal,4440186
+2014,Others,264584
+2013,Dog bite repair,26935
+2013,Birth defect,30257
+2013,Breast implant removals,18223
+2013,Breast reconstruction,95589
+2013,Breast reduction,62611
+2013,Burn care,16113
+2013,Hand surgery,131282
+2013,Hand and neck reconstruction,26481
+2013,Hernia repair,9458
+2013,Laceration repair,253660
+2013,Lower extremity reconstruction,17026
+2013,Maxillofacial surgery,198531
+2013,Migraine peripheral trigger site surgery,
+2013,Pelvic floor reconstruction,1220
+2013,Pressure ulcers,
+2013,Scar revision,177317
+2013,Tumor removal,4426634
+2013,Others,242783
+2012,Dog bite repair,27752
+2012,Birth defect,27626
+2012,Breast implant removals,16596
+2012,Breast reconstruction,91655
+2012,Breast reduction,68416
+2012,Burn care,16989
+2012,Hand surgery,123377
+2012,Hand and neck reconstruction,27161
+2012,Hernia repair,8949
+2012,Laceration repair,291244
+2012,Lower extremity reconstruction,16603
+2012,Maxillofacial surgery,209464
+2012,Migraine peripheral trigger site surgery,
+2012,Pelvic floor reconstruction,873
+2012,Pressure ulcers,
+2012,Scar revision,171129
+2012,Tumor removal,4211134
+2012,Others,300106
+2011,Dog bite repair,32961
+2011,Birth defect,34345
+2011,Breast implant removals,14991
+2011,Breast reconstruction,93083
+2011,Breast reduction,83241
+2011,Burn care,19369
+2011,Hand surgery,105711
+2011,Hand and neck reconstruction,
+2011,Hernia repair,
+2011,Laceration repair,356601
+2011,Lower extremity reconstruction,
+2011,Maxillofacial surgery,87024
+2011,Migraine peripheral trigger site surgery,
+2011,Pelvic floor reconstruction,
+2011,Pressure ulcers,
+2011,Scar revision,160516
+2011,Tumor removal,4042955
+2011,Others,276439
+2010,Dog bite repair,30484
+2010,Birth defect,31472
+2010,Breast implant removals,16058
+2010,Breast reconstruction,86424
+2010,Breast reduction,78427
+2010,Burn care,21298
+2010,Hand surgery,110280
+2010,Hand and neck reconstruction,
+2010,Hernia repair,
+2010,Laceration repair,332314
+2010,Lower extremity reconstruction,
+2010,Maxillofacial surgery,90347
+2010,Migraine peripheral trigger site surgery,
+2010,Pelvic floor reconstruction,
+2010,Pressure ulcers,
+2010,Scar revision,171237
+2010,Tumor removal,3949895
+2010,Others,277770
