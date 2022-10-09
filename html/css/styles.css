@@ -1,0 +1,84 @@
+body *{
+  font-family: 'Arial', sans-serif;
+}
+
+h1 {
+  font-weight: 1000;
+  font-family: 'Verdana', sans-serif;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+body {
+  background-color: lightgray;
+  font-family: 'Arial', sans-serif;
+}
+
+.page {
+  width: 850px;
+  background-color: white;
+  margin: auto;
+  padding: 50px;
+  padding-top: 35px;
+}
+
+.vis-container {
+  width: 100%;
+}
+
+.description h2{
+  color: #305a91;
+  font-weight: 900;
+  font-family: 'Arial', sans-serif;
+}
+
+.description-right {
+  padding-left: 20px;
+}
+
+.description-left {
+  padding-right: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.pure-g {
+}
+
+.small-font {
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+}
+
+hr {
+  position: relative;
+  border: none;
+  height: 4px;
+  margin-bottom: 30px;
+  background: red;
+}
+
+.box {
+  overflow-wrap: break-word;
+  padding-left: 150px;
+}
+
+.box2 {
+  overflow-wrap: break-word;
+  padding-left: -400px;
+}
+
+.spacing {
+  margin-top: 50px;
+}
+
+.column {
+  width: 70%;
+  padding: 10px;
+  float: right;
+  box-sizing: border-box;
+}
+
+.breakhere {page-break-before: always}
