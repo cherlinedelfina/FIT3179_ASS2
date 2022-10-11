@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "title": "Reconstructive Surgery in the US (2020)",
-  "width": 600,
-  "height": 420,
-  "padding": {"left": 0, "right": 0, "top": 0, "bottom": 0},
+  "width": 430,
+  "height": 400,
+  "padding": {"left": 60, "right": 0, "top": 0, "bottom": 0},
   "signals": [
     {"name": "cx", "update": "width / 1.9"},
     {"name": "cy", "update": "height / 2"},
@@ -235,7 +235,7 @@
         },
         "update": {
           "size": {
-            "signal": "pow(sqrt(sqrt(datum.Counts))*4.8, 2)",
+            "signal": "pow(sqrt(sqrt(datum.Counts))*4.5, 2)",
             "scale": "size"
           },
           "stroke": {"value": "white"},
