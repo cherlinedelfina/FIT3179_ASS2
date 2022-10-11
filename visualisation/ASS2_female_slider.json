@@ -1,8 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Top Cosmetic Procedures (Female)",
-  "width": 430,
-  "height": 400,
+  "width": "container",
   "padding": 2.5,
   "params": [
     {
@@ -21,13 +20,13 @@
     "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_female_2%20-%20Sheet1.csv",
     "format": {"type": "csv"}
   },
-  "transform": [{"filter": "datum.year == Year_selection"}],
+  "transform": [{"filter": "datum.year == Year_selection"}, {"calculate": "datum.counts/1000", "as": "count"}],
   "mark": {"type": "bar"},
   "encoding": {
     "y": {
-      "field": "counts",
+      "field": "count",
       "type": "quantitative",
-      "title": "Counts",
+      "title": "Counts (in thousands)",
       "axis": {"tickCount": 4}
     },
     "x": {
