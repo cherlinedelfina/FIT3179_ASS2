@@ -160,7 +160,6 @@
     {
       "fill": "color",
       "title": "Body Sections",
-      "orient": "top-right",
       "encode": {"labels": {"update": {"text": {"field": "value"}}}}
     }
   ],
