@@ -1,8 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Top Cosmetic Procedures (Male)",
-  "width": 500,
-  "height": 400,
+  "width": "container",
   "padding": 2.5,
   "params": [
     {
