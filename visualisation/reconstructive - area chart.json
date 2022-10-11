@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Top 5 Reconstructive Surgery in the US (2010-2020)",
-  "width": "400",
-  "height": "300",
+  "width": "370",
+  "height": "230",
   "data": {
     "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_reconstructive_procedures%20-%20Sheet1.csv"
   },
@@ -92,7 +92,7 @@
     {
       "mark": {
         "type": "text",
-        "yOffset": -52,
+        "yOffset": -40,
         "xOffset": -10,
         "baseline": "bottom",
         "size": 15
