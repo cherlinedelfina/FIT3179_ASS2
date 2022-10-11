@@ -7,7 +7,7 @@
   "signals": [
     {"name": "cx", "update": "width / 1.9"},
     {"name": "cy", "update": "height / 2"},
-    {"name": "gravityX", "value": 0.3},
+    {"name": "gravityX", "value": 0.17},
     {"name": "gravityY", "value": 0.6}
   ],
   "data": [
