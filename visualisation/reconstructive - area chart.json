@@ -110,5 +110,5 @@
       }
     }
   ],
-  "config": {"legend": {"orient": "bottom", "layout": {"bottom": {"anchor": "middle"}}}}
+  "config": {"legend": {"orient": "left", "layout": {"bottom": {"anchor": "middle"}}}}
 }
