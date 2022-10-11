@@ -110,5 +110,5 @@
       }
     }
   ],
-  "config": {}
+  "config": {"legend": {"orient": "left", "layout": {"bottom": {"anchor": "middle"}}}}
 }
