@@ -1,0 +1,111 @@
+surgery,year,counts,gender
+nose reshaping,2020,65121,male
+eyelid surgery,2020,45806,male
+cheek implant,2020,28638,male
+liposuction,2020,22815,male
+ear surgery,2020,22467,male
+nose reshaping,2019,61865,male
+eyelid surgery,2019,42142,male
+cheek implant,2019,24056,male
+ear surgery,2019,21568,male
+liposuction,2019,18024,male
+nose reshaping,2018,52660,male
+eyelid surgery,2018,31494,male
+liposuction,2018,29528,male
+breast reduction,2018,24753,male
+hair transplantation,2018,16840,male
+nose reshaping,2017,52393,male
+eyelid surgery,2017,32281,male
+liposuction,2017,28180,male
+breast reduction,2017,26839,male
+hair transplantation,2017,14443,male
+nose reshaping,2016,55024,male
+eyelid surgery,2016,30958,male
+breast reduction,2016,27760,male
+liposuction,2016,26908,male
+facelift,2016,12102,male
+nose reshaping,2015,53248,male
+eyelid surgery,2015,29906,male
+breast reduction,2015,27456,male
+liposuction,2015,25656,male
+facelift,2015,11963,male
+nose reshaping,2014,54680,male
+eyelid surgery,2014,29402,male
+breast reduction,2014,26175,male
+liposuction,2014,24327,male
+facelift,2014,11851,male
+nose reshaping,2013,57391,male
+eyelid surgery,2013,30398,male
+liposuction,2013,23558,male
+breast reduction,2013,22939,male
+facelift,2013,12699,male
+nose reshaping,2012,61771,male
+eyelid surgery,2012,29050,male
+liposuction,2012,22914,male
+breast reduction,2012,20723,male
+facelift,2012,11913,male
+nose reshaping,2011,62110,male
+eyelid surgery,2011,28637,male
+liposuction,2011,23159,male
+breast reduction,2011,19766,male
+facelift,2011,11214,male
+nose reshaping,2010,63585,male
+eyelid surgery,2010,31476,male
+liposuction,2010,23899,male
+breast reduction,2010,18280,male
+hair transplantation,2010,13217,male
+nose reshaping,2020,287434,female
+eyelid surgery,2020,279306,female
+face lift,2020,216350,female
+breast augmentation,2020,193073,female
+liposuction,2020,188252,female
+breast augmentation,2019,280692,female
+liposuction,2019,270670,female
+breast lift,2019,146711,female
+tummy tuck,2019,140381,female
+eyelid surgery,2019,113229,female
+breast augmentation,2018,313735,female
+liposuction,2018,229030,female
+eyelid surgery,2018,175035,female
+nose reshaping,2018,161120,female
+tummy tuck,2018,125189,female
+breast augmentation,2017,300378,female
+liposuction,2017,218174,female
+eyelid surgery,2017,177290,female
+nose reshaping,2017,166531,female
+tummy tuck,2017,124869,female
+breast augmentation,2016,290467,female
+liposuction,2016,208329,female
+eyelid surgery,2016,178062,female
+nose reshaping,2016,167994,female
+tummy tuck,2016,122731,female
+breast augmentation,2015,279143,female
+liposuction,2015,196395,female
+eyelid surgery,2015,174028,female
+nose reshaping,2015,164731,female
+tummy tuck,2015,123003,female
+breast augmentation,2014,286254,female
+liposuction,2014,186225,female
+eyelid surgery,2014,177107,female
+nose reshaping,2014,162444,female
+facelift,2014,116415,female
+breast augmentation,2013,290224,female
+eyelid surgery,2013,185243,female
+liposuction,2013,176259,female
+nose reshaping,2013,163662,female
+facelift,2013,120621,female
+breast augmentation,2012,286274,female
+nose reshaping,2012,180913,female
+liposuction,2012,179214,female
+eyelid surgery,2012,174965,female
+facelift,2012,114407,female
+breast augmentation,2011,307180,female
+nose reshaping,2011,181662,female
+liposuction,2011,181543,female
+eyelid surgery,2011,167649,female
+tummy tuck,2011,111091,female
+breast augmentation,2010,296203,female
+nose reshaping,2010,188676,female
+liposuction,2010,179207,female
+eyelid surgery,2010,177288,female
+tummy tuck,2010,111642,female
