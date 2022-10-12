@@ -21,15 +21,15 @@
     "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_male_2%20-%20Sheet1.csv",
     "format": {"type": "csv"}
   },
-  "transform": [{"filter": "datum.year == Year_selection"}],
+  "transform": [{"filter": "datum.year == Year_selection"}, {"calculate": "datum.counts/1000", "as": "count"}],
   "mark": {"type": "bar"},
   "encoding": {
     "y": {
-      "field": "counts",
+      "field": "count",
       "type": "quantitative",
-      "title": "Counts",
+      "title": "Counts (in thousands)",
       "axis": {"tickCount": 4},
-      "scale": {"domain": [0, 70000]}
+      "scale": {"domain": [0, 70]}
     },
     "x": {
       "field": "surgery",
