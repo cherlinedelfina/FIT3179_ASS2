@@ -26,7 +26,7 @@
       "hconcat": [
         {
           "title": {"text": "Female", "fontSize": 14},
-          "width": 300,
+          "width": 400,
           "height": 300,
           "transform": [
             {"filter": "datum.year == Year_selection"},
@@ -73,7 +73,7 @@
         },
         {
           "title": {"text": "Male", "fontSize": 14},
-          "width": 300,
+          "width": 400,
           "height": 300,
           "transform": [
             {"filter": "datum.year == Year_selection"},
