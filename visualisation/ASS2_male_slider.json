@@ -28,7 +28,8 @@
       "field": "counts",
       "type": "quantitative",
       "title": "Counts",
-      "axis": {"tickCount": 4}
+      "axis": {"tickCount": 4},
+      "scale": {"domain": [0, 70000]}
     },
     "x": {
       "field": "surgery",
