@@ -1,0 +1,125 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_male_female%20-%20Sheet1.csv"
+  },
+  "title": {
+    "text": "Top Cosmetic Procedures (Female vs male)",
+    "fontSize": 16,
+    "anchor": "middle"
+  },
+  "params": [
+    {
+      "name": "Year_selection",
+      "value": 2020,
+      "bind": {
+        "input": "range",
+        "min": 2010,
+        "max": 2020,
+        "step": 1,
+        "name": "Year:  "
+      }
+    }
+  ],
+  "vconcat": [
+    {
+      "hconcat": [
+        {
+          "title": {"text": "Female", "fontSize": 14},
+          "width": 400,
+          "height": 300,
+          "transform": [
+            {"filter": "datum.year == Year_selection"},
+            {"filter": "datum.gender == 'female'"},
+            {"calculate": "datum.counts/1000", "as": "count"}
+          ],
+          "mark": {"type": "bar"},
+          "encoding": {
+            "y": {
+              "field": "count",
+              "type": "quantitative",
+              "title": "Counts (in thousands)",
+              "axis": {"tickCount": 4},
+              "scale": {"domain": [0, 350]}
+            },
+            "x": {
+              "field": "surgery",
+              "type": "ordinal",
+              "title": "Procedures",
+              "axis": {"labelAngle": 0},
+              "sort": "array"
+            },
+            "color": {
+              "field": "Surgery",
+              "type": "nominal",
+              "scale": {"range": ["#F1D302"]},
+              "legend": null
+            }
+          },
+          "layer": [
+            {"mark": {"type": "bar", "fill": "#F1D302"}},
+            {
+              "mark": {"type": "text", "yOffset": -1, "baseline": "bottom"},
+              "encoding": {
+                "text": {
+                  "field": "counts",
+                  "type": "quantitative",
+                  "format": ".3s"
+                },
+                "color": {"value": "black"}
+              }
+            }
+          ]
+        },
+        {
+          "title": {"text": "Male", "fontSize": 14},
+          "width": 400,
+          "height": 300,
+          "transform": [
+            {"filter": "datum.year == Year_selection"},
+            {"filter": "datum.gender == 'male'"},
+            {"calculate": "datum.counts/1000", "as": "count"}
+          ],
+          "mark": {"type": "bar"},
+          "encoding": {
+            "y": {
+              "field": "count",
+              "type": "quantitative",
+              "title": "Counts (in thousands)",
+              "axis": {"tickCount": 4},
+              "scale": {"domain": [0, 350]}
+            },
+            "x": {
+              "field": "surgery",
+              "type": "ordinal",
+              "title": "Procedures",
+              "axis": {"labelAngle": 0},
+              "sort": "array"
+            },
+            "color": {
+              "field": "Surgery",
+              "type": "nominal",
+              "scale": {"range": ["#F1D302"]},
+              "legend": null
+            }
+          },
+          "layer": [
+            {"mark": {"type": "bar", "fill": "#235789"}},
+            {
+              "mark": {"type": "text", "yOffset": -1, "baseline": "bottom"},
+              "encoding": {
+                "text": {
+                  "field": "counts",
+                  "type": "quantitative",
+                  "format": ".3s"
+                },
+                "color": {"value": "black"}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "config": {"title": {"font": "sans-serif", "fontSize": 16}}
+}
