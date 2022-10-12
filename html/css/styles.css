@@ -15,7 +15,7 @@ body {
 }
 
 .page {
-  width: 850px;
+  width: 950px;
   background-color: white;
   margin: auto;
   padding: 50px;
@@ -26,6 +26,14 @@ body {
   width: 100%;
 }
 
+.vis-heightcontainer {
+  width: 90%;
+}
+
+.vis-1heightcontainer {
+  width: 10%;
+}
+
 .description h2{
   color: #305a91;
   font-weight: 900;
@@ -33,11 +41,22 @@ body {
 }
 
 .description-right {
+  overflow-wrap: break-word;
   padding-left: 20px;
 }
 
+.description-right2 {
+  padding-left: 10px;
+}
+
 .description-left {
+  
   padding-right: 20px;
+}
+.description-middle {
+  overflow-wrap: break-word;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .center {
@@ -62,6 +81,11 @@ hr {
 
 .box {
   overflow-wrap: break-word;
+  padding-left: 165px;
+}
+
+.box10 {
+  overflow-wrap: break-word;
   padding-left: 150px;
 }
 
@@ -69,6 +93,17 @@ hr {
   overflow-wrap: break-word;
   padding-left: -400px;
 }
+
+.box3 {
+  overflow-wrap: break-word;
+  padding-left: 60px;
+}
+
+.box4 {
+  overflow-wrap: break-word;
+  padding-right: 180px;
+}
+
 
 .spacing {
   margin-top: 50px;
@@ -79,6 +114,15 @@ hr {
   padding: 10px;
   float: right;
   box-sizing: border-box;
+}
+
+.box5 {
+  height: 100%;
+  display: inline-block;
+  margin: 15px;
+  vertical-align: middle;
+  overflow-wrap: break-word;
+
 }
 
 .breakhere {page-break-before: always}
