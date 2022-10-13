@@ -1,9 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 "title": {"text":"Top 5 Reconstructive Surgery in the US (2010-2020)"},
-  "width": 320,
-  "height": 148,
-  "padding": 20,
+  "width": 400,
+  "height": 175,
   "data": {
     "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_reconstructive_procedures%20-%20Sheet1.csv"
   },
@@ -34,7 +33,7 @@
   ],
   "transform": [
     {
-      "joinaggregate": [{"op": "sum", "field": "Counts", "as": "Sum_counts"}],
+      "joinaggregate": [{"op": "sum", "field": "Counts", "as": "sum_Count"}],
       "groupby": ["Year"]
     },
     {"calculate": "datum.Counts/1000000", "as": "Count"},
@@ -43,8 +42,7 @@
     },
     {
       "filter": "datum.Procedure == 'Tumor removal' || datum.Procedure == 'Laceration repair' || datum.Procedure == 'Scar revision' || datum.Procedure == 'Hand surgery' || datum.Procedure == 'Maxillofacial surgery'"
-    },
-    {"calculate": "datum.Procedure", "as": "Cou"}
+    }
   ],
   "mark": "area",
   "encoding": {
