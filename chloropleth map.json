@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Plastic Surgery Demand in the US per 100,000 people",
-  "width": 600,
-  "height": 300,
-  "projection": {"type": "equalEarth"},
+  "width": 650,
+  "height": 320,
+  "projection": {"type": "albersUsa"},
   "data": {
     "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2_map/main/usa_state_map.TopoJSON",
     "format": {"type": "topojson", "feature": "USA_STATE_MAP"}
