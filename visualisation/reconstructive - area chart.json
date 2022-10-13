@@ -54,9 +54,10 @@
       "title": "Year"
     },
     "y": {
+
       "aggregate": "sum",
       "field": "Count",
-      "axis": {"tickCount": 6},
+      "axis": {"tickCount": 3},
       "title": "Counts (in million)"
     },
     "color": {
@@ -88,29 +89,5 @@
       }
     ]
   },
-  "layer": [
-    {"mark": "area"},
-    {
-      "mark": {
-        "type": "text",
-        "yOffset": -40,
-        "xOffset": -10,
-        "baseline": "bottom",
-        "size": 15
-      },
-      "encoding": {
-        "text": {
-          "field": "Sum_counts",
-          "type": "quantitative",
-          "format": ".3s"
-        },
-        "color": {"value": "#a50000"},
-        "opacity": {
-          "condition": {"test": "datum['Counts'] == '5191300'", "value": 1},
-          "value": 0
-        }
-      }
-    }
-  ],
   "config": {"legend": {"orient": "bottom"}}
 }
