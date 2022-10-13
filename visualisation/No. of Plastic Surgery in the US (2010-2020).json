@@ -1,51 +1,75 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Cosmetic Surgery Patients in the US (2020)",
-    "width": 400,
-  "height": 130,
+  "title": "No. of Cosmetic Surgery in the US (2010-2020)",
+  "width": 400,
+  "height": 190,
   "data": {
-    "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_gender%20-%20Sheet1.csv"
+    "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_year%20-%20Sheet1.csv"
   },
   "transform": [
-    {"calculate": "(datum.Total/13410000)", "as": "percentage_total"}
+    {
+      "calculate": "indexof(['Minimally invasive', 'Surgical'], datum.Procedure)",
+      "as": "order"
+    },
+    {"calculate": "datum.Count/1000000", "as": "Counts"},
+    {
+      "joinaggregate": [{"op": "sum", "field": "Counts", "as": "Sum_counts"}],
+      "groupby": ["year"]
+    },
+    {"calculate": "datum.Sum_counts*1000000", "as": "Counts_m"}
   ],
-  "mark": {"type": "arc"},
+  "mark": "area",
   "encoding": {
-    "theta": {
-      "field": "percentage_total",
-      "type": "quantitative",
-      "stack": "normalize"
+    "x": {
+      "timeUnit": "year",
+      "field": "year",
+      "axis": {"format": "%Y", "tickCount": 6},
+      "title": "Year"
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "Counts",
+      "axis": {"tickCount": 5},
+      "title": "Counts (in million)"
     },
     "color": {
-      "field": "Gender",
+      "field": "Procedure",
       "type": "nominal",
-      "legend": {"orient": "none", "legendX":70, "legendY": 14},
-      "scale": {"domain": ["Female", "Male"], "range": ["#F1D302", "#235789"]}
-    }
+      "scale": {
+        "domain": ["Surgical", "Minimally invasive"],
+        "range": ["#5D3A9B", "#E66100"]
+      },
+      "legend": {"orient": "none", "legendX": 7, "legendY": 5}
+    },
+    "order": {"field": "order", "type": "ordinal"},
+    "tooltip": [
+      {"field": "Procedure", "type": "nominal"},
+      {"title": "Year", "field": "year", "type": "temporal","timeUnit": "year"},
+      {
+        "field": "Count",
+        "type": "quantitative",
+        "title": "Counts",
+        "format": ".2s"
+      },
+      {
+        "field": "Counts_m",
+        "type": "quantitative",
+        "title": "Total Counts",
+        "format": ".3s"
+      }
+    ]
   },
   "layer": [
-    {"mark": {"type": "arc", "outerRadius": 70, "xOffset": 11, "yOffset": 9}},
+    {"mark": "area"},
     {
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "radius": 37,
-        "fontSize": 14,
-        "fontWeight": "bold"
-      },
+      "mark": {"type": "text", "yOffset": -5, "xOffset": 0, "baseline": "bottom","size":15},
       "encoding": {
-        "theta": {"field": "percentage_total", "type": "quantitative"},
-        "color": {
-          "condition": {
-            "test": "datum['percentage_total'] > 0.5",
-            "value": "black"
-          },
-          "value": "white"
-        },
-        "text": {
-          "field": "percentage_total",
-          "type": "quantitative",
-          "format": ".0%"
+        "text": {"field": "Counts_m", "type": "quantitative", "format": ".3s"},
+        "y": {"scale": "Age", "field": "Sum_counts"},
+        "color": {"value": "#a50000"},
+        "opacity": {
+          "condition": {"test": "datum['Counts_m'] == '18428665'", "value": 1},
+          "value": 0
         }
       }
     }
