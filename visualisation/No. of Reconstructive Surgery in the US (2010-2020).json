@@ -1,12 +1,52 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "No. of Reconstructive Surgery in the US (2010-2020)",
-  "width": "container",
+"title": {"text":"Top 5 Reconstructive Surgery in the US (2010-2020)"},
+  "width": 320,
+  "height": 148,
+  "padding": 20,
   "data": {
-    "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_reconstructive_year%20-%20Sheet1.csv"
+    "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_reconstructive_procedures%20-%20Sheet1.csv"
   },
-  "transform": [{"calculate": "datum.Counts/1000000", "as": "Count"}],
-  "mark": {"type": "line", "point": {"filled": false, "fill": "white"}},
+  "params": [
+    {
+      "name": "Procedure_Selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Hand surgery",
+          "Laceration repair",
+          "Scar revision",
+          "Tumor removal",
+          "Maxillofacial surgery"
+        ],
+        "labels": [
+          "Show All",
+          "Hand surgery",
+          "Laceration repair",
+          "Scar revision",
+          "Tumor removal",
+          "Maxillofacial surgery"
+        ],
+        "name": "Procedure: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "joinaggregate": [{"op": "sum", "field": "Counts", "as": "Sum_counts"}],
+      "groupby": ["Year"]
+    },
+    {"calculate": "datum.Counts/1000000", "as": "Count"},
+    {
+      "filter": "Procedure_Selection == null || datum.Procedure == Procedure_Selection"
+    },
+    {
+      "filter": "datum.Procedure == 'Tumor removal' || datum.Procedure == 'Laceration repair' || datum.Procedure == 'Scar revision' || datum.Procedure == 'Hand surgery' || datum.Procedure == 'Maxillofacial surgery'"
+    },
+    {"calculate": "datum.Procedure", "as": "Cou"}
+  ],
+  "mark": "area",
   "encoding": {
     "x": {
       "timeUnit": "year",
@@ -15,41 +55,43 @@
       "title": "Year"
     },
     "y": {
+
       "aggregate": "sum",
       "field": "Count",
       "axis": {"tickCount": 3},
       "title": "Counts (in million)"
     },
-    "tooltip": [
-      {
-        "field": "year_Year",
-        "format": "%Y",
-        "timeUnit": "year",
-        "type": "nominal",
-        "title": "Year"
+    "color": {
+      "field": "Procedure",
+      "scale": {
+        "domain": [
+          "Hand surgery",
+          "Laceration repair",
+          "Scar revision",
+          "Tumor removal",
+          "Maxillofacial surgery"
+        ],
+        "range": ["#e41a1c", "#984ea3", "#ff7f00", "#377eb8", "#a6cee3"]
       },
-      {"field": "Counts", "type": "nominal", "title": "Count", "format": ".3s"}
+        "legend": {"columns": 3}
+      
+    },
+    "tooltip": [
+      {"field": "Procedure", 
+      "type": "nominal"},
+      {
+        "field": "Year",
+        "title": "Year",
+        "type": "temporal",
+        "timeUnit": "year"
+      },
+      {
+        "field": "Counts",
+        "type": "quantitative",
+        "title": "Counts",
+        "format": ".2s"
+      }
     ]
   },
-  "layer": [
-    {"mark": {"type": "line", "point": {"filled": false, "fill": "white"}}},
-    {
-      "mark": {
-        "type": "text",
-        "yOffset": -6,
-        "xOffset": 1,
-        "baseline": "bottom",
-        "size": 15
-      },
-      "encoding": {
-        "text": {"field": "Counts", "type": "quantitative", "format": ".3s"},
-        "color": {"value": "#a50000"},
-        "opacity": {
-          "condition": {"test": "datum['Counts'] == '6878486'", "value": 1},
-          "value": 0
-        }
-      }
-    }
-  ],
-  "config": {}
+  "config": {"legend": {"orient": "bottom"}}
 }
