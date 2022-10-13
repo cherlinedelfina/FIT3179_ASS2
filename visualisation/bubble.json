@@ -1,14 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "title": "Reconstructive Surgery in the US (2020)",
-  "width": 830,
-  "height": 400,
-  "padding": {"left": 120, "right": 0, "top": 15, "bottom": 0},
+  "width": 400,
+  "height": 295,
+  "padding": {"left": 50, "right": 0, "top": 6, "bottom": 0},
   "signals": [
     {"name": "cx", "update": "width / 1.9"},
     {"name": "cy", "update": "height / 2"},
-    {"name": "gravityX", "value": 0.17},
-    {"name": "gravityY", "value": 0.6}
+    {"name": "gravityX", "value": 0.3},
+    {"name": "gravityY", "value": 0.8}
   ],
   "data": [
     {
@@ -205,6 +205,11 @@
           "type": "formula",
           "as": "rank",
           "expr": "if(datum.Rank>9, '',datum.Rank)"
+        },
+        {
+          "type": "formula",
+          "as": "sizess",
+          "expr": "round(sqrt(sqrt(datum.Counts/40)))"
         }
       ]
     }
@@ -235,7 +240,7 @@
         },
         "update": {
           "size": {
-            "signal": "pow(sqrt(sqrt(datum.Counts))*4.5, 2)",
+            "signal": "pow(sqrt(sqrt(datum.Counts))*3.5, 2)",
             "scale": "size"
           },
           "stroke": {"value": "white"},
@@ -270,12 +275,12 @@
         "enter": {
           "align": {"value": "center"},
           "baseline": {"value": "middle"},
-          "fontSize": {"field": "Counts"},
+          "fontSize": {"field": "datum.sizess"},
           "fontWeight": {"value": "bold"},
           "fill": {"value": "white"},
           "text": {"field": "datum.test"}
         },
-        "update": {"x": {"field": "x"}, "y": {"field": "y", "offset": -10}}
+        "update": {"x": {"field": "x"}, "y": {"field": "y", "offset": -2}}
       }
     },
     {
@@ -285,7 +290,7 @@
         "enter": {
           "align": {"value": "center"},
           "baseline": {"value": "middle"},
-          "fontSize": {"field": "10"},
+          "fontSize": {"field": "datum.sizess"},
           "fontWeight": {"value": "bold"},
           "fill": {"value": "white"},
           "text": {"field": "datum.Proc"}
@@ -300,12 +305,13 @@
         "enter": {
           "align": {"value": "center"},
           "baseline": {"value": "middle"},
-          "fontSize": {"field": "10"},
+          "fontSize": {"field": "datum.sizess"},
           "fontWeight": {"value": "bold"},
           "fill": {"value": "white"},
-          "text": {"field": "datum.rank"}
+          "text": {"field": "datum.rank"},
+          "radius": {"value": 21}
         },
-        "update": {"x": {"field": "x"}, "y": {"field": "y", "offset": -30}}
+        "update": {"x": {"field": "x"}, "y": {"field": "y"}}
       }
     }
   ],
