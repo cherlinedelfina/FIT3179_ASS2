@@ -34,7 +34,7 @@
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "State"},
-      {"field": "properties.Population", "type": "quantitative"},
+      {"field": "Population", "type": "quantitative"},
       {"field": "Google RSV index", "type": "quantitative"}
     ]
   },
