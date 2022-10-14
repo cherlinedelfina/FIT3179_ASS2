@@ -93,7 +93,7 @@
         "type": "quantitative",
         "title": "Total Counts",
         "format": ".3s"
-      },
+      }
     ]
   },
   "config": {"legend": {"orient": "bottom"}}
