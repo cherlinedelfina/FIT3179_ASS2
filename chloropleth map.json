@@ -16,10 +16,11 @@
           "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2_map/main/ASS2_US_dataset1%20-%20Sheet1.csv"
         },
         "key": "State",
-        "fields": ["Demand Index"]
+        "fields": ["Demand Index", "Population"]
       }
     },
-    {"calculate": "(round(datum['Demand Index']*100000))", "as": "Google RSV index"}
+    {"calculate": "(round(datum['Demand Index']*100000))", "as": "Google RSV index"},
+    {"calculate": "datum['Population']", "as": "Population"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
@@ -34,7 +35,7 @@
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "State"},
-      {"field": "Population", "type": "quantitative"},
+      {"field": "Population", "type": "ordinal"},
       {"field": "Google RSV index", "type": "quantitative"}
     ]
   },
