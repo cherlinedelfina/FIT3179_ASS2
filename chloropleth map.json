@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Plastic Surgery Demand in the US per 100,000 people",
+  "title": "Google Trends Relative Search Volumes (RSV) for Plastic Surgery in the US per 100,000 people",
   "width": 650,
   "height": 320,
   "projection": {"type": "albersUsa"},
@@ -19,12 +19,12 @@
         "fields": ["Demand Index"]
       }
     },
-    {"calculate": "(round(datum['Demand Index']*100000))", "as": "Demand"}
+    {"calculate": "(round(datum['Demand Index']*100000))", "as": "Google RSV index"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "Demand",
+      "field": "Google RSV index",
       "type": "quantitative",
       "scale": {
         "type": "threshold",
@@ -34,7 +34,7 @@
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "State"},
-      {"field": "Demand", "type": "quantitative"}
+      {"field": "Google RSV index", "type": "quantitative"}
     ]
   },
   "config": {}
