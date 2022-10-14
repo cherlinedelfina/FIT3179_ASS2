@@ -7,7 +7,8 @@
     "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_gender%20-%20Sheet1.csv"
   },
   "transform": [
-    {"calculate": "(datum.Total/13410000)", "as": "percentage_total"}
+    {"calculate": "(datum.Total/13410000)", "as": "percentage_total"},
+    {"calculate": "(sqrt(datum.Total/50050))", "as": "sizess"}
   ],
   "mark": {"type": "arc"},
   "encoding": {
@@ -19,17 +20,17 @@
     "color": {
       "field": "Gender",
       "type": "nominal",
-      "legend": {"orient": "none", "legendX":70, "legendY": 14},
+      "legend": {"orient": "none", "legendX":47, "legendY": 5},
       "scale": {"domain": ["Female", "Male"], "range": ["#F1D302", "#235789"]}
     }
   },
   "layer": [
-    {"mark": {"type": "arc", "outerRadius": 70, "xOffset": 11, "yOffset": 9}},
+    {"mark": {"type": "arc", "outerRadius": 80, "xOffset": 11, "yOffset": 9}},
     {
       "mark": {
         "type": "text",
         "align": "right",
-        "radius": 37,
+        "radius": 39,
         "fontSize": 14,
         "fontWeight": "bold"
       },
