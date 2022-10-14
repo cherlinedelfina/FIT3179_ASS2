@@ -32,7 +32,7 @@
   ],
   "transform": [
     {
-      "joinaggregate": [{"op": "sum", "field": "Counts", "as": "sum_Counts"}],
+      "joinaggregate": [{"op": "sum", "field": "Counts", "as": "sumCounts"}],
       "groupby": ["Year"]
     },
     {"calculate": "datum.Counts/1000000", "as": "Count"},
@@ -87,7 +87,13 @@
         "type": "quantitative",
         "title": "Counts",
         "format": ".2s"
-      }
+      },
+      {
+        "field": "sumCounts",
+        "type": "quantitative",
+        "title": "Total Counts",
+        "format": ".3s"
+      },
     ]
   },
   "config": {"legend": {"orient": "bottom"}}
