@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+"title": "Top 5 Reconstructive Surgery in the US (2010-2020)",
+  "width": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_reconstructive_procedures%20-%20Sheet1.csv"
+  },
+  "params": [
+    {
+      "name": "Procedure_Selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Hand surgery",
+          "Laceration repair",
+          "Scar revision",
+          "Tumor removal",
+          "Maxillofacial surgery"
+        ],
+        "labels": [
+          "Show All",
+          "Hand surgery",
+          "Laceration repair",
+          "Scar revision",
+          "Tumor removal",
+          "Maxillofacial surgery"
+        ],
+        "name": "Procedure: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "joinaggregate": [{"op": "sum", "field": "Counts", "as": "sumCounts"}],
+      "groupby": ["Year"]
+    },
+    {"calculate": "datum.Counts/1000000", "as": "Count"},
+    {
+      "filter": "Procedure_Selection == null || datum.Procedure == Procedure_Selection"
+    },
+    {
+      "filter": "datum.Procedure == 'Tumor removal' || datum.Procedure == 'Laceration repair' || datum.Procedure == 'Scar revision' || datum.Procedure == 'Hand surgery' || datum.Procedure == 'Maxillofacial surgery'"
+    }
+  ],
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "timeUnit": "year",
+      "field": "Year",
+      "axis": {"format": "%Y", "tickCount": 6},
+      "title": "Year"
+    },
+    "y": {
+
+      "aggregate": "sum",
+      "field": "Count",
+      "axis": {"tickCount": 3},
+      "title": "Counts (in million)"
+    },
+    "color": {
+      "field": "Procedure",
+      "scale": {
+        "domain": [
+          "Hand surgery",
+          "Laceration repair",
+          "Scar revision",
+          "Tumor removal",
+          "Maxillofacial surgery"
+        ],
+        "range": ["#e41a1c", "#984ea3", "#ff7f00", "#377eb8", "#a6cee3"]
+      },
+        "legend": {"columns": 3}
+      
+    },
+    "tooltip": [
+      {"field": "Procedure", 
+      "type": "nominal"},
+      {
+        "field": "Year",
+        "title": "Year",
+        "type": "temporal",
+        "timeUnit": "year"
+      },
+      {
+        "field": "Counts",
+        "type": "quantitative",
+        "title": "Counts",
+        "format": ".2s"
+      }
+    ]
+  },
+  "config": {"legend": {"orient": "bottom"}}
+}
