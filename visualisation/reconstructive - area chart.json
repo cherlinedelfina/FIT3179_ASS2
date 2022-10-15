@@ -68,7 +68,7 @@
           "Tumor removal",
           "Maxillofacial surgery"
         ],
-        "range": ["#377eb8", "#984ea3", "#ff7f00", "#e41a1c", "#a6cee3"]
+        "range": ["#e41a1c", "#984ea3", "#ff7f00", "#377eb8", "#a6cee3"]
       },
         "legend": {"columns": 3}
       
