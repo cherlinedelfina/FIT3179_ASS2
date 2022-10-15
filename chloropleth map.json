@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Google Trends Relative Search Volumes (RSV) for Plastic Surgery in the US in 2020 (per 100,000 people)",
+  "title": "Google Relative Search Volumes (RSV) for Plastic Surgery in the US (2020)",
   "width": 650,
   "height": 320,
   "projection": {"type": "albersUsa"},
@@ -19,13 +19,13 @@
         "fields": ["Demand Index", "Population"]
       }
     },
-    {"calculate": "(round(datum['Demand Index']*100000))", "as": "Google RSV index"},
+    {"calculate": "(round(datum['Demand Index']*100000))", "as": "Google RSV index per 100,000 population"},
     {"calculate": "datum['Population']", "as": "Population"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "Google RSV index",
+      "field": "Google RSV index per 100,000 population",
       "type": "quantitative",
       "scale": {
         "type": "threshold",
@@ -36,7 +36,7 @@
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "State"},
       {"field": "Population", "type": "ordinal"},
-      {"field": "Google RSV index", "type": "quantitative"}
+      {"field": "Google RSV index per 100,000 population", "type": "quantitative"}
     ]
   },
   "config": {}
