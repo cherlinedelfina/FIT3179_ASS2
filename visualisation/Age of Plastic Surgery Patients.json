@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Age of Cosmetic Surgery Patients (2020)",
+  "title": "Age of Cosmetic Surgery Patients in the US (2020)",
   "width": "container",
   "data": {
     "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/ASS2_age%20-%20Sheet1.csv"
