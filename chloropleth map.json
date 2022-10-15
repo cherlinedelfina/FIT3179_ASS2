@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Google Trends Relative Search Volumes (RSV) for Plastic Surgery in the US (2020)",
+  "title": "Google Trends Relative Search Volumes (RSV) for Plastic Surgery in the US in 2020 (per 100,000 people)",
   "width": 650,
   "height": 320,
   "projection": {"type": "albersUsa"},
