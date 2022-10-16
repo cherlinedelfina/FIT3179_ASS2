@@ -5,13 +5,13 @@
           "test": ["Birth", "defect"],
           "Proc": "69k",
           "rank": 8,
-  "Body sections": "whole body"
+  "Body sections": "Whole body"
         },
         {
           "Procedure": "Breast implant removals",
           "Counts": 22676,
           "rank": 14,
-         "Body sections": "torso"
+         "Body sections": "Torso"
         },
         {
           "Procedure": "Breast reconstruction",
@@ -20,7 +20,7 @@
           "test": ["Breast", "reconstruction"],
           "Proc": "138k",
           "rank": 6,
-         "Body sections": "torso"
+         "Body sections": "Torso"
         },
         {
           "Procedure": "Breast reduction",
@@ -29,13 +29,13 @@
           "test": ["Breast", "reduction"],
           "Proc": "64k",
           "rank": 9,
-         "Body sections": "torso"
+         "Body sections": "Torso"
         },
         {
           "Procedure": "Burn care",
           "Counts": 24391,
           "Rank": 12,
-         "Body sections": "whole body"
+         "Body sections": "Whole body"
         },
         {
           "Procedure": "Hand surgery",
@@ -44,19 +44,19 @@
           "test": "Hand surgery",
           "Proc": "207k",
           "rank": 5,
-         "Body sections": "limbs"
+         "Body sections": "Limbs"
         },
         {
           "Procedure": "Hand and neck reconstruction",
           "Counts": 35387,
           "Rank": 11,
-         "Body sections": "whole body"
+         "Body sections": "Whole body"
         },
         {
           "Procedure": "Hernia repair",
           "Counts": 13191,
           "Rank": 16,
-         "Body sections": "torso"
+         "Body sections": "Torso"
         },
         {
           "Procedure": "Tumor removal",
@@ -65,7 +65,7 @@
           "test": "Tumor removal",
           "Proc": "5.2m",
           "rank": 1,
-         "Body sections": "whole body"
+         "Body sections": "Whole body"
         },
         {
           "Procedure": "Laceration repair",
@@ -74,13 +74,13 @@
           "test": "Laceration repair",
           "Proc": "387k",
           "rank": 2,
-         "Body sections": "whole body"
+         "Body sections": "Whole body"
         },
         {
           "Procedure": "Lower extremity reconstruction",
           "Counts": 23053,
           "Rank": 13,
-         "Body sections": "limbs"
+         "Body sections": "Limbs"
         },
         {
           "Procedure": "Maxillofacial surgery",
@@ -89,25 +89,25 @@
           "test": ["Maxillofacial", "surgery"],
           "Proc": "256k",
           "rank": 4,
-         "Body sections": "head"
+         "Body sections": "Head"
         },
         {
           "Procedure": "Migraine peripheral trigger site surgery",
           "Counts": 4520,
           "Rank": 17,
-         "Body sections": "head"
+         "Body sections": "Head"
         },
         {
           "Procedure": "Pelvic floor reconstruction",
           "Counts": 2993,
           "Rank": 18,
-         "Body sections": "torso"
+         "Body sections": "Torso"
         },
         {
           "Procedure": "Pressure ulcers",
           "Counts": 17463,
           "Rank": 15,
-         "Body sections": "whole body"
+         "Body sections": "Whole body"
         },
         {
           "Procedure": "Scar revision",
@@ -116,7 +116,7 @@
           "test": "Scar revision",
           "Proc": "264k",
           "rank": 3,
-         "Body sections": "whole body"
+         "Body sections": "Whole body"
         },
         {
           "Procedure": "Others",
@@ -125,5 +125,5 @@
           "test": "Others",
           "Proc": "112k",
           "rank": 7,
-         "Body sections": "whole body"
+         "Body sections": "Whole body"
         }]
