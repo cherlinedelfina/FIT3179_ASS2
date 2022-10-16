@@ -3,7 +3,7 @@
   "title": "Reconstructive Surgery in the US (2020)",
   "width": 400,
   "height":300,
-  "padding": {"left": 50, "right": 0, "top": 6, "bottom": 0},
+  "padding": {"left": 0, "right": 0, "top": 2, "bottom": 0},
   "signals": [
     {"name": "cx", "update": "width / 1.9"},
     {"name": "cy", "update": "height / 2"},
@@ -13,152 +13,7 @@
   "data": [
     {
       "name": "table",
-      "values": [
-        {
-          "Procedure": "Dog bite repair",
-          "Counts": 47454,
-          "Rank": 10,
-          "test": "",
-          "Proc": "",
-          "rank": ""
-        },
-        {
-          "Procedure": "Birth defect",
-          "Counts": 68915,
-          "Rank": 8,
-          "test": ["Birth", "defect"],
-          "Proc": "69k",
-          "rank": 8
-        },
-        {
-          "Procedure": "Breast implant removals",
-          "Counts": 22676,
-          "Rank": 14,
-          "test": "",
-          "Proc": "",
-          "rank": ""
-        },
-        {
-          "Procedure": "Breast reconstruction",
-          "Counts": 137808,
-          "Rank": 6,
-          "test": ["Breast", "reconstruction"],
-          "Proc": "138k",
-          "rank": 6
-        },
-        {
-          "Procedure": "Breast reduction",
-          "Counts": 63746,
-          "Rank": 9,
-          "test": ["Breast", "reduction"],
-          "Proc": "64k",
-          "rank": 9
-        },
-        {
-          "Procedure": "Burn care",
-          "Counts": 24391,
-          "Rank": 12,
-          "test": "",
-          "Proc": "",
-          "rank": ""
-        },
-        {
-          "Procedure": "Hand surgery",
-          "Counts": 206928,
-          "Rank": 5,
-          "test": "Hand surgery",
-          "Proc": "207k",
-          "rank": 5
-        },
-        {
-          "Procedure": "Hand and neck reconstruction",
-          "Counts": 35387,
-          "Rank": 11,
-          "test": "",
-          "Proc": "",
-          "rank": ""
-        },
-        {
-          "Procedure": "Hernia repair",
-          "Counts": 13191,
-          "Rank": 16,
-          "test": "",
-          "Proc": "",
-          "rank": ""
-        },
-        {
-          "Procedure": "Tumor removal",
-          "Counts": 5191300,
-          "Rank": 1,
-          "test": "Tumor removal",
-          "Proc": "5.2m",
-          "rank": 1
-        },
-        {
-          "Procedure": "Laceration repair",
-          "Counts": 386710,
-          "Rank": 2,
-          "test": "Laceration repair",
-          "Proc": "387k",
-          "rank": 2
-        },
-        {
-          "Procedure": "Lower extremity reconstruction",
-          "Counts": 23053,
-          "Rank": 13,
-          "test": "",
-          "Proc": "",
-          "rank": ""
-        },
-        {
-          "Procedure": "Maxillofacial surgery",
-          "Counts": 256085,
-          "Rank": 4,
-          "test": ["Maxillofacial", "surgery"],
-          "Proc": "256k",
-          "rank": 4
-        },
-        {
-          "Procedure": "Migraine peripheral trigger site surgery",
-          "Counts": 4520,
-          "Rank": 17,
-          "test": "",
-          "Proc": "",
-          "rank": ""
-        },
-        {
-          "Procedure": "Pelvic floor reconstruction",
-          "Counts": 2993,
-          "Rank": 18,
-          "test": "",
-          "Proc": "",
-          "rank": ""
-        },
-        {
-          "Procedure": "Pressure ulcers",
-          "Counts": 17463,
-          "Rank": 15,
-          "test": "",
-          "Proc": "",
-          "rank": ""
-        },
-        {
-          "Procedure": "Scar revision",
-          "Counts": 263643,
-          "Rank": 3,
-          "test": "Scar revision",
-          "Proc": "264k",
-          "rank": 3
-        },
-        {
-          "Procedure": "Others",
-          "Counts": 112223,
-          "Rank": 7,
-          "test": "Others",
-          "Proc": "112k",
-          "rank": 7
-        }
-      ],
+      "url": "https://raw.githubusercontent.com/cherlinedelfina/FIT3179_ASS2/main/dataset/bubble.json",
       "transform": [
         {"type": "formula", "as": "test", "expr": "datum.Procedure"},
         {
@@ -169,17 +24,7 @@
         {
           "type": "formula",
           "as": "Proc",
-          "expr": "round(datum.Counts/1000)  +'k'"
-        },
-        {
-          "type": "formula",
-          "as": "Proc",
           "expr": "if(datum.Counts<63000, '',datum.Proc)"
-        },
-        {
-          "type": "formula",
-          "as": "Proc",
-          "expr": "if(datum.Counts>1000000, 5.2 + 'm', datum.Proc)"
         },
         {
           "type": "formula",
@@ -214,6 +59,7 @@
       ]
     }
   ],
+
   "scales": [
     {
       "name": "size",
@@ -223,8 +69,8 @@
     {
       "name": "color",
       "type": "ordinal",
-      "domain": {"data": "table", "field": "Procedure"},
-      "range": ["#4a83b5"]
+      "domain": {"data": "table", "field": "Body sections"},
+      "range": ["#AF7C7B","#66c2a5", "#fc8d62", "#8da0cb"]
     }
   ],
   "marks": [
@@ -234,7 +80,7 @@
       "from": {"data": "table"},
       "encode": {
         "enter": {
-          "fill": {"scale": "color", "field": "Procedure"},
+          "fill": {"scale": "color", "field": "Body sections"},
           "xfocus": {"signal": "cx"},
           "yfocus": {"signal": "cy"}
         },
@@ -277,12 +123,13 @@
           "baseline": {"value": "middle"},
           "fontSize": {"field": "datum.sizess"},
           "fontWeight": {"value": "bold"},
-          "fill": {"value": "white"},
+          "fill": {"value": "black"},
           "text": {"field": "datum.test"}
         },
         "update": {"x": {"field": "x"}, "y": {"field": "y", "offset": -2}}
       }
     },
+    
     {
       "type": "text",
       "from": {"data": "nodes"},
@@ -292,12 +139,13 @@
           "baseline": {"value": "middle"},
           "fontSize": {"field": "datum.sizess"},
           "fontWeight": {"value": "bold"},
-          "fill": {"value": "white"},
+          "fill": {"value": "black"},
           "text": {"field": "datum.Proc"}
         },
         "update": {"x": {"field": "x"}, "y": {"field": "y", "offset": 20}}
       }
     },
+    
     {
       "type": "text",
       "from": {"data": "nodes"},
@@ -307,12 +155,19 @@
           "baseline": {"value": "middle"},
           "fontSize": {"field": "datum.sizess"},
           "fontWeight": {"value": "bold"},
-          "fill": {"value": "white"},
+          "fill": {"value": "black"},
           "text": {"field": "datum.rank"},
           "radius": {"value": 21}
         },
         "update": {"x": {"field": "x"}, "y": {"field": "y"}}
       }
+    }
+  ],
+   "legends": [
+    {"offset":33,
+      "fill": "color",
+      "title": "Body Sections",
+      "encode": {"labels": {"update": {"text": {"field": "value"}}}}
     }
   ],
   "config": {}
