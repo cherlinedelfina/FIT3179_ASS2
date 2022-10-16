@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "width": "528",
-  "height": "300",
+  "height": "282",
   "padding": 0,
 
   "signals": [{"name": "layout", "value": "squarify"}, {"name": "aspectRatio"}],
